@@ -1,0 +1,54 @@
+.TH "xor32sum" "1" "2026\-10-30" "TheCRatTime"
+.SH NAME
+\fBxor32sum\fR \- calculate hash sum of \fIFILE\fR\&.
+.PP
+.SH SYNOPSIS
+.nf
+\fBxor32sum \fIFILE \fB...\fR
+\fBxor32sum \-\-verify\fR|\fB\-\-check \fISIGNATURE_FILE FILE\fB
+\fBxor32sum \-\-version\fR|\fB\-V\fR
+\fBxor32sum \-\-help\fR|fB\-h\fR|\fB\-?\fR
+.fi
+.PP
+.SH DESCRIPTION
+\fBxor32sum\fR is a non crypto hash checker, based on Xorshift32 algorithm\&.
+.PP
+.SH OPTIONS
+\fB\-\-verify\fR, \fB\-\-check\fR
+.RS 4
+Check \fIFILE\fR by hash in \fISIGNATURE_FILE\fR\&.
+.RE
+.PP
+\fB\-\-version\fR, \fB\-V\fR
+.RS 4
+Show xor32sum version\&.
+.RE
+.PP
+\fB\-\-help\fR, \fB\-h\fR, \fB\-?\fR
+.RS 4
+Show this help and exit\&.
+.RE
+.PP
+.SH RETURN VALUE
+Return value is:
+.PP
+\fB0\fR
+.RS 4
+Zero errors, signature correct\&.
+.RE
+.PP
+\fB1\fR
+.RS 4
+Signature not correct\&.
+.RE
+.PP
+\fB2\fR
+.RS 4
+Can'\&t open file / allocate memory\&.
+.RE
+.PP
+.SH AUTHORS
+Project and man\-page: TheCRatTime
+.PP
+.SH SEE ALSO
+\fBmd5sum\fR(1), \fBsha256sum\fR(1), \fBsha1sum\fR(1)
