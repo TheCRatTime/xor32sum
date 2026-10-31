@@ -313,16 +313,21 @@ static int VerifyHandle(int argc, char** argv) {
 
   signature = OpenAndReadFile(signature_name, &signature_len);
   if (!signature) {
+    free(mem);
     return 2;
   }
 
   ToHex(GetXor32Sum(mem, (size_t)name_len), hash);
+
   if (strncmp(hash, signature, 8)) {
     Info("FAILED\n");
     code = 1;
   } else {
     Info("OK\n");
   }
+
+  free(mem);
+  free(signature);
 
   LOG(("verify exiting with code %u\n", code));
   

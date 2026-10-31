@@ -15,6 +15,6 @@
  */
 
 #ifndef XOR32SUM_VERSION
-# define XOR32SUM_VERSION "1.0.0"
-# define XOR32SUM_DESC "first version of xor32sum"
+# define XOR32SUM_VERSION "1.0.1"
+# define XOR32SUM_DESC "fixed free() in VerfiyHandle"
 #endif
